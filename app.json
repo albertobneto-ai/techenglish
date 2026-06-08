@@ -1,0 +1,15 @@
+{
+  "name": "TechEnglish",
+  "description": "English conversation simulator for IT professionals",
+  "stack": "heroku-24",
+  "env": {
+    "OPENROUTER_KEY": { "description": "OpenRouter API key", "required": true },
+    "APP_PASSWORD": { "description": "Login password", "value": "admin2026" },
+    "SESSION_SECRET": { "generator": "secret" },
+    "NODE_ENV": { "value": "production" }
+  },
+  "addons": ["heroku-postgresql:essential-0"],
+  "formation": {
+    "web": { "quantity": 1, "size": "eco" }
+  }
+}
